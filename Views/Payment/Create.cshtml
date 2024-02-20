@@ -1,0 +1,64 @@
+@model Payment
+
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Payment</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="PaymentId"></label>
+                <input asp-for="PaymentId" class="form-control"/>
+                <span asp-validation-for="PaymentId" class="text-danger"></span>
+                <label asp-for="OccupantId"></label>
+                <input asp-for="OccupantId" class="form-control"/>
+                <span asp-validation-for="OccupantId" class="text-danger"></span>
+                <label asp-for="PaymentAccountHead"></label>
+                <input type="radio" asp-for="PaymentAccountHead" value="Maintenance"/>Maintenance
+                <input type="radio" asp-for="PaymentAccountHead" value="SinkingFund"/>SinkingFund
+                <input type="radio" asp-for="PaymentAccountHead" value="Other"/>Other
+
+                <span asp-validation-for="PaymentAccountHead" class="text-danger"></span>
+                <label asp-for="PaymentDate"></label>
+                <input asp-for="PaymentDate" class="form-control"/>
+                <span asp-validation-for="PaymentDate" class="text-danger"></span>
+                <label asp-for="PaymentMode"></label>
+                <input type="radio" asp-for="PaymentMode" value="Cash"/>Cash
+                <input type="radio" asp-for="PaymentMode" value="Online"/>Online
+
+                <label asp-for="PaymentAmount"></label>
+                <input asp-for="PaymentAmount" class="form-control"/>
+                <span asp-validation-for="PaymentAmount" class="text-danger"></span>
+
+                <label asp-for="PaymentTransactionId"></label>
+                <input asp-for="PaymentTransactionId" class="form-control"/>
+                <span asp-validation-for="PaymentTransactionId" class="text-danger"></span>
+                <label asp-for="PaymentReceiptId"></label>
+                <input asp-for="PaymentReceiptId" class="form-control"/>
+                <span asp-validation-for="PaymentReceiptId" class="text-danger"></span>
+                <label asp-for="PaymentReceiptDate"></label>
+                <input asp-for="PaymentReceiptDate" class="form-control"/>
+                <span asp-validation-for="PaymentReceiptDate" class="text-danger"></span>
+                
+                <label asp-for="PaymentRemarks"></label>
+                <input asp-for="PaymentRemarks" class="form-control"/>
+                <span asp-validation-for="PaymentRemarks" class="text-danger"></span>
+
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+    <a asp-controller="Payment" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+

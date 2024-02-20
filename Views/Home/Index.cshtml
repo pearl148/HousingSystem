@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.parallax{
+    background-color:rgba(255,255,255,0.2);
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+#paratext{
+    z-index: 1;
+    position: absolute;
+    font-size: 5em;
+    color: #000;
+    text-shadow: #85c734;
+   
+}
+.parallax img{
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   pointer-events: none;
+    
+}
+</style>
+<section class="parallax">
+    <h2 id="paratext">Housing Society System</h2>
+    <img src="background.png" id="background">
+    <img src="building1.png" id="building1">
+    <img src="building2.png" id="building2">
+    <img src="car1.png" id="car1">
+    <img src="car2 (1).png" id="car2">
+    <img src="cloud1.png" style="z-index: 1;" id="cloud1">
+    <img src="cloud2.png" id="cloud2">
+    <img src="Remove background project (1).png" id="cloud3">
+    
+    <img src="cloud5.png" id="cloud5">
+    <img src="lastbase.png" id="lastbase">
+    <img src="leftchristmastree1.png" id="leftchristmastree1">
+    <img src="rightbuildings.png" id="rightbuildings">
+    <img src="righthouse.png" id="righthouse">
+
+
+
+</section>
+<div class="text-center" style="background-color:rgba(255,255,255,0.2);z-index:0;">
+    <br><br><br>
+   <h1 style=" font-size: 24px;
+            background: url('download.jpeg') repeat; /* Replace 'your-image.jpg' with the path to your image */
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin: 20px;
+            font-size:100px"><u>Vishwadev Apartment</u></h1>
+
+<div>
+    <img src="IMG-20220813-WA0007.jpg" width="50%" height = "50%" style="padding:10px 10px 10px 10px;border:15px groove rgb(0, 245, 245);border-top-left-radius: 40px;border-bottom-right-radius:40px;">
+   </div>
+   <br><br>
+
+<div class="text-center" style="background: linear-gradient(to right,#BBB13A 20%,#A2AB2C 40%,#85c734 80%,#5EB160 100%,#528938 120%,#0D8060 140%); padding:10px 10px 10px 10px;">
+    <button type="button" class="btn btn-primary"><img src="person_FILL0_wght400_GRAD0_opsz24.svg" style="border-radius:50%;background-color:rgba(255,255,255,0.2);"><a asp-controller="User" asp-action="Verify" style="padding-left:10px;">Admin Login</a></button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary"><img src="person_FILL0_wght400_GRAD0_opsz24.svg" style="border-radius:50%;background-color:rgba(255,255,255,0.2);"><a asp-controller="User" asp-action="Verify" style="padding-left:10px;">Chairman Login </a></button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary"><img src="person_FILL0_wght400_GRAD0_opsz24.svg" style="border-radius:50%;background-color:rgba(255,255,255,0.2);"><a asp-controller="User" asp-action="Verify" style="padding-left:10px;">Resident Login</a></button>
+
+
+ 
+</div>
+<div style="text-align:left;padding:40px 40px 40px 40px;">
+    
+    <h2>
+        Address:
+    </h2>
+    <p>
+        Vishwadev Apartment,Sardar Colony,Tarabai Park<br>
+        Near Akashwani Road,<br>
+        Kolhapur - 416003,<br>
+        Maharashtra
+
+    </p>
+   
+    <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.161146776346!2d74.23996477608219!3d16.718809384058734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1005e3e0f149d%3A0xfa6cd7565db22c1a!2sVishwadev%20Apartment!5e0!3m2!1sen!2sin!4v1701680161910!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="float:right;text-align:left,border-radius:40px;background-color:rgba(255,255,255,0.2);padding:10px 10px 10px 10px" >
+        <h2>Contact Us:</h2> <br><br>
+        <p> For any Queries or Enquiry please feel free to call on:</p>
+        <p>9423142331</p><br>
+        <p>Or mail us at vishwadevapt2003@gmail.com</p>
+
+
+    </div>
+</div>
+</div>
+</div>
+

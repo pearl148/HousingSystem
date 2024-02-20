@@ -1,0 +1,357 @@
+{
+  "Files": [
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/obj/Debug/net7.0-windows/scopedcss/projectbundle/HousingSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets/HousingSystem.bundle.scp.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/IMG-20220813-WA0007.jpg",
+      "PackagePath": "staticwebassets/IMG-20220813-WA0007.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/Remove background project (1).png",
+      "PackagePath": "staticwebassets/Remove background project (1).png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/background.png",
+      "PackagePath": "staticwebassets/background.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/building1.png",
+      "PackagePath": "staticwebassets/building1.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/building2.png",
+      "PackagePath": "staticwebassets/building2.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/car1.png",
+      "PackagePath": "staticwebassets/car1.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/car2 (1).png",
+      "PackagePath": "staticwebassets/car2 (1).png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/cloud1.png",
+      "PackagePath": "staticwebassets/cloud1.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/cloud2.png",
+      "PackagePath": "staticwebassets/cloud2.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/cloud5.png",
+      "PackagePath": "staticwebassets/cloud5.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/css/Bootswatch.css",
+      "PackagePath": "staticwebassets/css/Bootswatch.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/download.jpeg",
+      "PackagePath": "staticwebassets/download.jpeg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/garlicvine.webp",
+      "PackagePath": "staticwebassets/garlicvine.webp"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lastbase.jpg",
+      "PackagePath": "staticwebassets/lastbase.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lastbase.png",
+      "PackagePath": "staticwebassets/lastbase.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/leftchristmastree1.jpg",
+      "PackagePath": "staticwebassets/leftchristmastree1.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/leftchristmastree1.png",
+      "PackagePath": "staticwebassets/leftchristmastree1.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/pearlsign.jpg",
+      "PackagePath": "staticwebassets/pearlsign.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/person_FILL0_wght400_GRAD0_opsz24.svg",
+      "PackagePath": "staticwebassets/person_FILL0_wght400_GRAD0_opsz24.svg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/rightbuildings.jpg",
+      "PackagePath": "staticwebassets/rightbuildings.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/rightbuildings.png",
+      "PackagePath": "staticwebassets/rightbuildings.png"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/righthouse.jpg",
+      "PackagePath": "staticwebassets/righthouse.jpg"
+    },
+    {
+      "Id": "/home/sherlyn/TYBCAProjectSem5/HousingSocietySystem/HousingSystem/wwwroot/righthouse.png",
+      "PackagePath": "staticwebassets/righthouse.png"
+    },
+    {
+      "Id": "obj/Debug/net7.0-windows/staticwebassets/msbuild.HousingSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0-windows/staticwebassets/msbuild.build.HousingSystem.props",
+      "PackagePath": "build\\HousingSystem.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0-windows/staticwebassets/msbuild.buildMultiTargeting.HousingSystem.props",
+      "PackagePath": "buildMultiTargeting\\HousingSystem.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0-windows/staticwebassets/msbuild.buildTransitive.HousingSystem.props",
+      "PackagePath": "buildTransitive\\HousingSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

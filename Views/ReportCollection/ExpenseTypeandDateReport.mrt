@@ -1,0 +1,460 @@
+{
+  "ReportVersion": "2024.1.4",
+  "ReportGuid": "f8e02e8a010437a2280c230d21909e06",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "Report.mrt",
+  "ReportCreated": "/Date(1708144741000+0530)/",
+  "ReportChanged": "/Date(1708168531000+0530)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "StartDate",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime",
+          "SortDirection": "None",
+          "CheckedColumn": "null;"
+        },
+        "Alias": "StartDate",
+        "Type": "System.Nullable`1[System.DateTime]",
+        "AllowUseAsSqlParameter": true
+      },
+      "1": {
+        "Name": "EndDate",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime",
+          "SortDirection": "None",
+          "CheckedColumn": "null;"
+        },
+        "Alias": "EndDate",
+        "Type": "System.Nullable`1[System.DateTime]",
+        "AllowUseAsSqlParameter": true
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiSqlSource",
+        "Name": "DataSource",
+        "Alias": "DataSource",
+        "Columns": {
+          "0": {
+            "Name": "ExpenseId",
+            "NameInSource": "ExpenseId",
+            "Alias": "ExpenseId",
+            "Type": "System.Int32"
+          },
+          "1": {
+            "Name": "ExpenseItem",
+            "NameInSource": "ExpenseItem",
+            "Alias": "ExpenseItem",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "ExpenseDate",
+            "NameInSource": "ExpenseDate",
+            "Alias": "ExpenseDate",
+            "Type": "System.DateTime"
+          },
+          "3": {
+            "Name": "ExpenseMonthYear",
+            "NameInSource": "ExpenseMonthYear",
+            "Alias": "ExpenseMonthYear",
+            "Type": "System.DateTime"
+          },
+          "4": {
+            "Name": "ExpenseAmount",
+            "NameInSource": "ExpenseAmount",
+            "Alias": "ExpenseAmount",
+            "Type": "System.Decimal"
+          },
+          "5": {
+            "Name": "ExpenseAccountHead",
+            "NameInSource": "ExpenseAccountHead",
+            "Alias": "ExpenseAccountHead",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "ExpenseRemark",
+            "NameInSource": "ExpenseRemark",
+            "Alias": "ExpenseRemark",
+            "Type": "System.String"
+          },
+          "7": {
+            "Name": "ExpenseProofData",
+            "NameInSource": "ExpenseProofData",
+            "Alias": "ExpenseProofData",
+            "Type": "System.Byte[]"
+          }
+        },
+        "NameInSource": "Apartment",
+        "SqlCommand": "select * from Expense;"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiSqlDatabase",
+        "Name": "Apartment",
+        "Alias": "Connection",
+        "ConnectionStringEncrypted": "4xr9601Nwt3oXM3YY1wlF9US9Y1hBUvdaU2x7OUYsS/CxHEoxVkBvPFHPczzXCJGw1r3K8ZOo1nHWsn8anjgL4tWwStNSzHNYVihzMkEpUbRdPfLYUrTmWlM5QTiBA=="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "104f6ab5c5de59383df4a2856e0e3d7f",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiChart",
+          "Name": "Chart1",
+          "ClientRectangle": "5.2,9.4,6.2,3.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:255,255,255",
+          "DataSourceName": "DataSource",
+          "EditorType": "Simple",
+          "Series": {
+            "0": {
+              "Ident": "StiPie3dSeries",
+              "ShowShadow": false,
+              "SeriesLabels": {
+                "Ident": "StiCenterAxisLabels",
+                "MarkerSize": {
+                  "Width": 8,
+                  "Height": 6
+                },
+                "ValueTypeSeparator": "-",
+                "LabelColor": "69,95,99",
+                "BorderColor": "69,95,99",
+                "Brush": "solid:219,245,249"
+              },
+              "ValueDataColumn": "DataSource.ExpenseAmount",
+              "Title": {
+                "Value": "Series 1"
+              },
+              "BorderColor": "0,11,98",
+              "Brush": "gradient:15,111,198:0,61,148:",
+              "Options3D": {
+                "Opacity": 1,
+                "Lighting": "Gradient"
+              }
+            }
+          },
+          "Area": {
+            "Ident": "StiPie3dArea",
+            "BorderColor": "69,95,99",
+            "Brush": "gradient:255,255,255::90"
+          },
+          "Table": {
+            "GridLineColor": "69,95,99",
+            "Header": {
+              "Brush": "solid:White"
+            },
+            "DataCells": {
+              "TextColor": "69,95,99"
+            }
+          },
+          "SeriesLabels": {
+            "Ident": "StiCenterPie3dLabels",
+            "MarkerSize": {
+              "Width": 8,
+              "Height": 6
+            },
+            "ValueTypeSeparator": "-",
+            "LabelColor": "69,95,99",
+            "BorderColor": "69,95,99",
+            "Brush": "solid:219,245,249"
+          },
+          "Legend": {
+            "ShowShadow": false,
+            "BorderColor": "69,95,99",
+            "Brush": "gradient:255,255,255:239,255,255:90",
+            "TitleColor": "69,95,99",
+            "LabelsColor": "69,95,99",
+            "MarkerSize": {
+              "Width": 10,
+              "Height": 10
+            }
+          },
+          "Title": {
+            "Brush": "solid:69,95,99"
+          },
+          "Strips": {
+            "0": {
+              "StripBrush": "solid:150,165,194,73",
+              "Text": "Strip 1",
+              "TitleColor": "165,194,73"
+            }
+          },
+          "Style": {
+            "Ident": "StiStyle15"
+          },
+          "Filters": {
+            "0": {
+              "Ident": "StiFilter",
+              "Condition": "Between",
+              "DataType": "Expression",
+              "Column": "ExpenseAmount",
+              "Value1": "StartDate",
+              "Value2": "EndDate"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderBand1",
+          "CanGrow": true,
+          "ClientRectangle": "0,0.4,19.01,1.4",
+          "ComponentStyle": "{Expenses Data}",
+          "Expressions": {
+            "0": {
+              "Name": "ComponentStyle",
+              "Expression": "Expenses Data"
+            }
+          },
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "empty",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "ClientRectangle": "0,-0.4,19,1.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Expenses Data"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";20;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "gradient:255,217,101:83,129,53:",
+              "TextBrush": "solid:30,78,121",
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiTable",
+          "Name": "Table1",
+          "CanGrow": true,
+          "ClientRectangle": "0,2.6,19.01,3.45",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell1",
+              "ClientRectangle": "0,-0.01,5.59,1.14",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Expense Date"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "glass:168,208,141:true:",
+              "TextBrush": "solid:Black",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell2",
+              "ClientRectangle": "5.59,-0.01,6.22,1.14",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Expense Type"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "glass:168,208,141:true:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell3",
+              "ClientRectangle": "11.81,0,7.2,1.13",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Expense Amount"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "glass:168,208,141:true:",
+              "TextBrush": "solid:Black",
+              "ID": 27
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell4",
+              "ClientRectangle": "0,1.13,5.59,1.12",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource.ExpenseDate}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "glass:254,229,153:true:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn",
+              "ID": 25
+            },
+            "4": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell5",
+              "ClientRectangle": "5.59,1.13,6.22,1.12",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource.ExpenseItem}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "glass:254,229,153:true:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn",
+              "ID": 26
+            },
+            "5": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell6",
+              "ClientRectangle": "11.81,1.13,7.2,1.13",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource.ExpenseAmount}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "glass:254,229,153:true:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn",
+              "ID": 28
+            },
+            "6": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell7",
+              "ClientRectangle": "0,2.25,5.59,1.19",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": "Top, Left, Bottom;;;;;;;solid:0,0,0",
+              "Brush": "glass:189,215,238:true:",
+              "TextBrush": "solid:Black",
+              "ID": 32
+            },
+            "7": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell8",
+              "ClientRectangle": "5.59,2.25,6.22,1.19",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Expressions": {
+                "0": {
+                  "Name": "Font"
+                }
+              },
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Total Expense Amount"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "Top, Right, Bottom;;;;;;;solid:0,0,0",
+              "Brush": "glass:189,215,238:true:",
+              "TextBrush": "solid:Black",
+              "ID": 33
+            },
+            "8": {
+              "Ident": "StiTableCell",
+              "Name": "Table1_Cell9",
+              "ClientRectangle": "11.81,2.25,7.19,1.22",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Sum(Table1,DataSource.ExpenseAmount)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "::Solid;::Double;::Solid;::Solid;;;solid:0,0,0",
+              "Brush": "glass:189,215,238:true:",
+              "TextBrush": "solid:Black",
+              "Type": "Totals",
+              "ID": 34
+            }
+          },
+          "MinHeight": 0.6000000000000001,
+          "DataSourceName": "DataSource",
+          "Filters": {
+            "0": {
+              "Ident": "StiFilter",
+              "Condition": "Between",
+              "DataType": "Expression",
+              "Column": "ExpenseDate",
+              "Value1": "StartDate",
+              "Value2": "EndDate"
+            }
+          },
+          "RowCount": 3,
+          "ColumnCount": 3,
+          "FooterRowsCount": 1,
+          "HeaderRowsCount": 1,
+          "FooterCanBreak": true,
+          "NumberID": 35
+        }
+      },
+      "PageWidth": 21.01,
+      "PageHeight": 29.69,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      }
+    }
+  }
+}

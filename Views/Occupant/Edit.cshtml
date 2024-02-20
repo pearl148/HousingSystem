@@ -1,0 +1,57 @@
+@model Occupant
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Occupant</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="OccupantId"></label>
+                <input asp-for="OccupantId" class="form-control"/>
+                <span asp-validation-for="OccupantId" class="text-danger" value="@Model.OccupantId"></span>
+                <label asp-for="OccupantFirstName"></label>
+                <input asp-for="OccupantFirstName" class="form-control"/>
+                <span asp-validation-for="OccupantFirstName" class="text-danger"></span>
+                <label asp-for="OccupantLastName"></label>
+                <input asp-for="OccupantLastName" class="form-control"/>
+                <span asp-validation-for="OccupantLastName" class="text-danger"></span>
+                <label asp-for="OccupantIsOwned"></label>
+                <input asp-for="OccupantIsOwned" class="form-control"/>
+                <span asp-validation-for="OccupantIsOwned" class="text-danger"></span>
+                <label asp-for="OccupantPhone"></label>
+                <input asp-for="OccupantPhone" class="form-control"/>
+                <span asp-validation-for="OccupantPhone" class="text-danger"></span>
+                <label asp-for="OwnerEmailId"></label>
+                <input asp-for="OwnerEmailId" class="form-control"/>
+                <span asp-validation-for="OwnerEmailId" class="text-danger"></span>
+                <label asp-for="OccupantStartDate"></label>
+                <input asp-for="OccupantStartDate" class="form-control"/>
+                <span asp-validation-for="OccupantStartDate" class="text-danger"></span>
+                <label asp-for="FlatNo"></label>
+                <input asp-for="FlatNo" class="form-control"/>
+                <span asp-validation-for="FlatNo" class="text-danger"></span>
+                <label asp-for="OwnerId"></label>
+                <input asp-for="OwnerId" class="form-control"/>
+                <span asp-validation-for="OwnerId" class="text-danger"></span>
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+    <a asp-controller="Occupant" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+

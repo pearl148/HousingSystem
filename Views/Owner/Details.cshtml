@@ -1,0 +1,68 @@
+@model IEnumerable<Owner>
+@{
+    ViewData["Title"] = "Details";
+
+}
+<partial name="_Notification"></partial>
+<br><br>
+
+    <br><br>
+   
+<table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+    <thead class="rounded-2">
+        <tr>
+            <th>
+                OwnerId
+            </th>
+            <th>
+                FirstName
+            </th>
+             <th>
+                LastName
+            </th>
+             <th>
+                Phone
+            </th>
+             <th>
+                Email
+            </th>
+             <th>
+                DateOfPurchase
+            </th>
+             <th>
+                Flat No
+            </th>
+            </tr>
+    </thead>
+    <tbody class="rounded-2">
+    @foreach(var obj in Model)
+    {
+        <tr >
+            <td width="50%">
+                @obj.OwnerId
+            </td>
+             <td width="30%">
+                @obj.OwnerFirstName
+            </td>
+            <td width="30%">
+                @obj.OwnerLastName
+            </td>
+             <td width="30%">
+                @obj.OwnerPhone
+            </td>
+             <td width="30%">
+                @obj.OwnerEmailId
+            </td>
+             <td width="30%">
+                @obj.OwnerDateOfPurchase
+            </td>
+             <td width="30%">
+                @obj.FlatNo
+            </td>
+            
+            <td>
+                
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+@model Noticenew
+
+
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Notice</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="NoticeId"></label>
+                <input asp-for="NoticeId" class="form-control" disabled/>
+                <span asp-validation-for="NoticeId" class="text-danger"></span>
+                <label asp-for="ToDate"></label>
+                <input asp-for="ToDate" class="form-control"/>
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+                <label asp-for="FromDate"></label>
+                <input asp-for="FromDate" class="form-control"/>
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+                <label asp-for="NoticeTitle"></label>
+               <input asp-for="NoticeTitle" class="form-control" />
+
+
+                <span asp-validation-for="NoticeTitle" class="text-danger"></span>
+                <label asp-for="NoticePara"></label>
+                
+                    <textarea asp-for="NoticePara"></textarea>
+                    
+                <span asp-validation-for="NoticePara" class="text-danger"></span>
+               
+               
+               
+
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+    <a asp-controller="Noticenew" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+

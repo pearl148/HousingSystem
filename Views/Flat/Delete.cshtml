@@ -1,0 +1,31 @@
+@model Flat
+<form method="post" asp-action="DeletePost">
+   
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit category</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <input asp-for="FlatNo" hidden/>
+            <div class="mb-3">
+                <label asp-for="FlatNo"></label>
+                <input asp-for="FlatNo" disabled class="form-control"/>
+                <span asp-validation-for="FlatNo" class="text-danger"></span>
+                <label asp-for="SqFeetArea"></label>
+                <input asp-for="SqFeetArea" disabled class="form-control"/>
+                <span asp-validation-for="SqFeetArea" class="text-danger"></span>
+            </div>
+    
+    <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+    <a asp-controller="Flat" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+

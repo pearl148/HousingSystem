@@ -1,0 +1,65 @@
+@model Complaint
+
+
+
+<form method="post" asp-action="DeletePost">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Complaint</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="ComplaintId"></label>
+                <input asp-for="ComplaintId" class="form-control" disabled/>
+                <input asp-for="ComplaintId" class="form-control" hidden/>
+                <span asp-validation-for="ComplaintId" class="text-danger"></span>
+                <label asp-for="DateOfComplaint"></label>
+                <input asp-for="DateOfComplaint" class="form-control"/>
+                <span asp-validation-for="DateOfComplaint" class="text-danger"></span>
+                <label asp-for="ComplaintGiver"></label>
+                <input asp-for="ComplaintGiver" class="form-control"/>
+                <span asp-validation-for="ComplaintGiver" class="text-danger"></span>
+                <label asp-for="ComplaintTitle"></label>
+               <input asp-for="ComplaintTitle" class="form-control" />
+
+
+                <span asp-validation-for="ComplaintTitle" class="text-danger"></span>
+                <label asp-for="ComplaintCategory"></label>
+                <select asp-for="ComplaintCategory" class="form-control">
+                 <option asp-for="ComplaintCategory" value="Water Issue">Water Issue</option>
+                 <option asp-for="ComplaintCategory" value="Bore Well Issue">Bore Well Issue</option>
+                 <option asp-for="ComplaintCategory" value="Neighbor Issue">Neighbor Issue</option>
+                 <option asp-for="ComplaintCategory" value="Electricity Issue">Electricity Issue</option>
+                 <option asp-for="ComplaintCategory" value="Lift Issue">Lift Issue</option>
+                 <option asp-for="ComplaintCategory" value="Parking Issue">Parking Issue</option>
+                 <option asp-for="ComplaintCategory" value="Vehicle Damage Issue">Vehicle Damage Issue</option>
+                 <option asp-for="ComplaintCategory" value="Stolen/Theft Issue">Stolen/Theft Issue</option>
+                 <option asp-for="ComplaintCategory" value="Noise Issue">Noise Issue</option>
+                 <option asp-for="ComplaintCategory" value="Other Issue">Other Issue</option>
+                </select>
+                <span asp-validation-for="ComplaintCategory" class="text-danger"></span>
+                <label asp-for="ComplaintDetail"></label>
+                
+                    <textarea asp-for="ComplaintDetail"></textarea>
+                    
+                <span asp-validation-for="ComplaintDetail" class="text-danger"></span>
+               
+               
+               
+
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+    <a asp-controller="Complaint" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+

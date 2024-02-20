@@ -1,0 +1,61 @@
+@model Expense
+
+
+
+<form method="post" asp-action="DeletePost">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Expense @Model.ExpenseId</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+               
+                <input asp-for="ExpenseId" class="form-control" value="@Model.ExpenseId" hidden/>
+                
+                <label asp-for="ExpenseItem"></label>
+                <input asp-for="ExpenseItem" class="form-control"/>
+                <span asp-validation-for="ExpenseItem" class="text-danger"></span>
+                <label asp-for="ExpenseDate"></label>
+                <input asp-for="ExpenseDate" class="form-control"/>
+                <span asp-validation-for="ExpenseDate" class="text-danger"></span>
+                <label asp-for="ExpenseMonthYear"></label>
+               <input type="month" asp-for="ExpenseMonthYear" class="form-control" />
+                <span asp-validation-for="ExpenseMonthYear" class="text-danger"></span>
+                <label asp-for="ExpenseAmount"></label>
+                <input asp-for="ExpenseAmount" class="form-control"/>
+                <span asp-validation-for="ExpenseAmount" class="text-danger"></span>
+
+                <label asp-for="ExpenseAccountHead"></label>
+                <div>
+                    <input type="radio" asp-for="ExpenseAccountHead" value="Maintenance"/>Maintenance
+                    <input type="radio" asp-for="ExpenseAccountHead" value="SinkingFund"/>Sinking Fund
+                    <input type="radio" asp-for="ExpenseAccountHead" value="Other"/>Other
+                
+            </div>
+                
+                <span asp-validation-for="ExpenseAccountHead" class="text-danger"></span>
+               
+                <label asp-for="ExpenseRemark"></label>
+                <input asp-for="ExpenseRemark" class="form-control"/>
+                <span asp-validation-for="ExpenseRemark" class="text-danger"></span>
+                 <label asp-for="ExpenseProofData"></label>
+                <input asp-for="ExpenseProofData" class="form-control"/>
+                <span asp-validation-for="ExpenseProofData" class="text-danger"></span>
+               
+
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+    <a asp-controller="Expense" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+

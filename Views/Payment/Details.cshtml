@@ -1,0 +1,147 @@
+@model IEnumerable<Payment>
+@{
+    ViewData["Title"] = "Details";
+
+}
+<partial name="_Notification"></partial>
+<br><br>
+
+    <br><br>
+   
+<table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+    <thead class="rounded-2">
+        <tr> <th>
+                PaymentId
+            </th>
+            
+             <th>
+                OccupantId
+            </th>
+            <th>
+                Payment Account Head
+            </th>
+            <th>
+                Payment Date
+            </th>
+             <th>
+                Payment Mode
+            </th>
+            <th>Payment TransactionId
+                </th>
+             <th>
+                Payment ReceiptId
+            </th>
+            <th>
+                Payment Receipt Date
+            </th>
+            <th>
+                Payment Remarks
+            </th>
+            
+            </tr>
+    </thead>
+    <tbody class="rounded-2">
+    @foreach(var obj in Model)
+    {
+        <tr> 
+            <td width="30%">
+                @obj.PaymentId
+            </td>
+            <td width="50%">
+                @obj.OccupantId
+            </td>
+            
+            <td width="30%">
+                @obj.PaymentAccountHead
+            </td>
+            <td width="30%">
+                @obj.PaymentDate
+            </td>
+             <td width="30%">
+                @obj.PaymentMode
+            </td>
+             <td width="30%">
+                @obj.PaymentTransactionId
+            </td>
+            <td width="30%">
+                @obj.PaymentReceiptId
+            </td>
+            <td width="30%">
+                @obj.PaymentReceiptDate
+            </td>
+             <td width="30%">
+                @obj.PaymentRemarks
+            </td>
+            <td>
+            <button class="btn btn-primary" onclick="Receipt('@obj.PaymentId','@obj.PaymentAmount','@obj.PaymentAccountHead','@obj.PaymentDate','@obj.PaymentReceiptId','@obj.PaymentReceiptDate')">Receipt</button>
+            </td>
+            
+        </tr>
+    }
+    </tbody>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+@section scripts{
+
+<script>
+    
+function Receipt(PaymentId, PaymentAmount, PaymentAccountHead,PaymentDate,PaymentReceiptId,PaymentReceiptDate) {
+   
+
+    // Implement your logic to handle the payment for the given maintenanceId
+    // ...
+
+    // Generate PDF receipt using jsPDF
+    generatePDFReceipt(PaymentId, PaymentAmount, PaymentAccountHead,PaymentDate,PaymentReceiptId,PaymentReceiptDate);
+}
+
+function generatePDFReceipt(PaymentId, PaymentAmount, PaymentAccountHead,PaymentDate,PaymentReceiptId,PaymentReceiptDate) {
+    // Create a new jsPDF instance
+    
+   var doc = new window.jspdf.jsPDF(); 
+    // Add content to the PDF
+     doc.setFillColor(0, 0, 255); // Red fill color
+    doc.setDrawColor(0, 0, 255);
+    doc.rect(18,20,180,200);
+    
+    doc.setTextColor(0, 0, 255);
+    doc.text('Vishwadev Apartment', 50, 50);
+   doc.setTextColor(0, 0, 0);
+    
+    doc.rect(50,60,60,1);
+
+    // Set fill color and draw color
+    doc.setFillColor(255, 0, 0); // Red fill color
+    doc.setDrawColor(255, 0, 0);
+    // Draw an underline for the header with a red border
+    doc.rect(18, 70, 180, 1);
+
+    doc.text(`Payment ID: ${PaymentId}`, 50, 90);
+    
+    doc.text(`Account Head: ${PaymentAccountHead}`, 50, 100);
+    doc.text(`Payment Date: ${formatDate(PaymentDate)}`, 50, 110);
+    doc.text(`Receipt Date: ${formatDate(PaymentReceiptDate)}`, 50, 120);
+    doc.rect(18,140,180,1);
+    doc.text(`Amount Paid: ${PaymentAmount}`, 50, 150);
+    doc.rect(18,170,180,1);
+
+      const signatureImage = '/pearlsign.jpg';
+    doc.addImage(signatureImage, 'JPEG', 100, 180, 50, 20);
+
+
+    // Save the PDF with a unique name (you can customize the name)
+    var fileName = `Receipt_${PaymentId}.pdf`;
+    doc.save(fileName);
+}
+function formatDate(dateString) {
+    // Implement your logic to format the date as needed
+    // Example: assuming dateString is in a standard format like "2023-10-11T12:34:56"
+    const date = new Date(dateString);
+    return date.toLocaleDateString(); // Adjust this according to your formatting requirements
+}
+ document.addEventListener('DOMContentLoaded', function () {
+        // You can remove the initScript function, and directly place the code here
+    });
+</script>
+}

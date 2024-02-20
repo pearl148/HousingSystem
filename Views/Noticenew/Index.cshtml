@@ -1,0 +1,109 @@
+@model IEnumerable<Noticenew>
+@{
+    ViewData["Title"] = "Index";
+
+}
+<partial name="_Notification"></partial>
+<br><br>
+<div class="col-12 text-end">
+    <a asp-controller="Noticenew" asp-action="Create" class="btn btn-primary">
+        Create Notice
+    </a>
+    </div>
+    <br><br>
+   
+<table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+    <thead class="rounded-2">
+        <tr>
+            <th>
+                Index
+            </th>
+            <th>
+                Title
+            </th>
+        </tr>
+    </thead>
+    <tbody class="rounded-2">
+
+    @DateTime.Now.ToString("MM/dd/yyyy");
+    @foreach(var obj in Model)
+    {
+        if(obj.ToDate <= DateTime.Today && obj.FromDate >= DateTime.Today){
+        <tr >
+             <td width="50%">
+                @obj.NoticeId
+            </td>
+            <td width="50%">
+                @obj.NoticeTitle
+            </td>
+             
+            <td>
+               <div class="m-75 btn-group" role="group">
+                    <a asp-controller="Noticenew" asp-action="View" asp-route-NoticeId ="@obj.NoticeId" class="btn btn-primary">View</a>
+                </div>
+            </td>
+            <td>
+                <div class="m-75 btn-group" role="group">
+                    <a asp-controller="Noticenew" asp-action="Edit" asp-route-NoticeId ="@obj.NoticeId" class="btn btn-primary">Edit</a>
+                </div>
+            </td>
+            <td>
+                <div class="m-75 btn-group" role="group">
+                    <a asp-controller="Noticenew" asp-action="Delete" asp-route-NoticeId ="@obj.NoticeId" class="btn btn-primary">Delete</a>
+                </div>
+            </td>
+        </tr>
+        }
+    }
+    </tbody>
+</table>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+@section scripts{
+
+   
+    <script>
+        function View(NoticeTitle, FromDate, ToDate, NoticePara) {
+            // Implement your logic to handle the payment for the given maintenanceId
+            // ...
+
+            // Generate PDF receipt using jsPDF
+
+            // Create a new jsPDF instance
+            var doc = new window.jspdf.jsPDF();
+
+            // Add content to the PDF
+            doc.setFillColor(0, 0, 255); // Blue fill color
+            doc.setDrawColor(0, 0, 255);
+
+            // Outer border
+            doc.rect(18, 20, 180, 200);
+
+            // Inner border with a space of 5 units
+            doc.rect(20, 22, 176, 196);
+
+            // Styling for the heading
+            doc.setTextColor(0, 0, 255);
+            doc.setFontSize(26);
+            doc.text(NoticeTitle, 50, 40);
+
+            // Reset styling for other elements
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+
+            doc.text(NoticePara, 30, 75);
+        }
+
+        // You can remove the initScript function, and directly place the code here
+        document.addEventListener('DOMContentLoaded', function () {
+            // Your additional initialization code goes here
+        });
+    </script>
+
+
+}
+
+
+}
+
+

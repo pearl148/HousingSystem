@@ -1,0 +1,75 @@
+@{
+    ViewData["Title"] = "PaymentForm";
+}
+
+<h1>Payment Form</h1>
+
+<form id="payment-form">
+    <input type="text" id="card-number" placeholder="Card Number">
+    <input type="text" id="card-expiry" placeholder="MM/YY">
+    <input type="text" id="card-cvc" placeholder="CVC">
+    <button id="pay-button">Pay Now</button>
+    <input type="hidden" id="MaintenanceId" value="@ViewBag.MaintenanceId" />
+    <input type="hidden" id="MaintenanceAmount" value="@ViewBag.MaintenanceAmount" />
+    <input type="hidden" id="MaintenanceAccountHead" value="@ViewBag.MaintenanceAccountHead" />
+</form>
+
+@section scripts {
+    <!-- Include Stripe.js library -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        // Function to handle payment submission
+        document.getElementById("pay-button").addEventListener("click", function() {
+            var maintenanceId = document.getElementById("MaintenanceId").value;
+            var maintenanceAmount = document.getElementById("MaintenanceAmount").value;
+            var maintenanceAccountHead = document.getElementById("MaintenanceAccountHead").value;
+
+            // Initialize Stripe with your publishable key
+            var stripe = Stripe('pk_test_51OeEKOSIYGdbFdzX3b5ZOJgwAuO7eUMWgbWCS0SUEijqVPQxxD2QQXMK8Jr5cnxKhavwxAVzKUaconZSo9mP3DZh00SLU4XZOl');
+
+            // Create a payment intent on the server
+            fetch('/Maintenance/CreatePaymentIntent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    MaintenanceId: MaintenanceId,
+                    MaintenanceAmount: MaintenanceAmount,
+                    MaintenanceAccountHead: MaintenanceAccountHead
+                })
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // Confirm the payment with Stripe
+                return stripe.confirmCardPayment(data.clientSecret, {
+                    payment_method: {
+                        card: {
+                            number: document.getElementById("card-number").value,
+                            exp_month: document.getElementById("card-expiry").value.split('/')[0],
+                            exp_year: document.getElementById("card-expiry").value.split('/')[1],
+                            cvc: document.getElementById("card-cvc").value
+                        },
+                        billing_details: {
+                            name: 'Card Holder Name' // You can update this with actual user details
+                        }
+                    }
+                });
+            })
+            .then(function(result) {
+                // Handle the payment result
+                if (result.error) {
+                    // Show error to your customer
+                    console.error(result.error.message);
+                } else {
+                    // Payment successful, redirect or display success message
+                    console.log('Payment successful:', result.paymentIntent);
+                    // You can update your UI or perform further actions here
+                }
+            });
+        });
+    </script>
+}

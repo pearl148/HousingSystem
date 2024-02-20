@@ -1,0 +1,185 @@
+@model IEnumerable<IGrouping<string, HousingSystem.Models.Payment>>
+
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+<partial name="_Notification"></partial>
+<br><br>
+<div class="col-12 text-end">
+    <a asp-controller="Payment" asp-action="Create" class="btn btn-primary">
+        Create Payment
+    </a>
+    </div>
+    <br><br>
+   
+@foreach(var monthGroup in Model){
+    <h2>@monthGroup.Key</h2>
+     <table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+        <thead class="rounded-2">
+            <tr>
+                <th>PaymentId</th>
+                <th>OccupantId</th>
+                <th>PaymentAccountHead</th>
+                <th>Payment Date</th>
+                <th>Payment Mode</th>
+                <th>PaymentAmount</th>
+                <th>TransactionId</th>
+                <th>ReceiptId</th>
+                <th>Receipt Date</th>
+                <th>Remarks</th>
+
+            </tr>
+        </thead>
+        <tbody class="rounded-2">
+            @foreach (var obj in monthGroup)
+            {
+                <tr>
+                    <td width="30%">@obj.PaymentId</td>
+                    <td width="50%">@obj.OccupantId</td>
+                    <td width="30%">@obj.PaymentAccountHead</td>
+                    <td width="30%">@obj.PaymentDate</td>
+                    <td width="30%">@obj.PaymentMode</td>
+                    <td width="30%">@obj.PaymentAmount</td>
+                    <td width="30%">@obj.PaymentTransactionId</td>
+                    <td width="30%">@obj.PaymentReceiptId</td>
+                    <td width="30%">@obj.PaymentReceiptDate</td>
+                    <td width="30%">@obj.PaymentRemarks</td>
+
+
+                    <td>
+                        <div class="m-75 btn-group" role="group">
+                            <a asp-controller="Payment" asp-action="Edit" asp-route-PaymentId="@obj.PaymentId" class="btn btn-primary">Edit</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="m-75 btn-group" role="group">
+                            <a asp-controller="Payment" asp-action="Delete" asp-route-PaymentId="@obj.PaymentId" class="btn btn-primary">Delete</a>
+                        </div>
+                    </td>
+                     <td>
+                        <button class="btn btn-primary" onclick="Receipt('@obj.PaymentId', '@obj.OccupantId', '@obj.PaymentAmount', '@obj.PaymentAccountHead', '@obj.PaymentDate', '@obj.PaymentReceiptId', '@obj.PaymentReceiptDate')">Receipt</button>
+
+            </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+@section scripts{
+
+
+<script>
+
+function Receipt(PaymentId, OccupantId, PaymentAmount, PaymentAccountHead, PaymentDate, PaymentReceiptId, PaymentReceiptDate) {
+    // Implement your logic to handle the payment for the given maintenanceId
+    // ...
+
+    // Generate PDF receipt using jsPDF
+  var ownerArray = [
+    ["F-104", "Jaison D'Souza", "F1"],
+    ["F-215", "Vijay Kassa", "F2"],
+    ["F-302", "Ravi Mohire", "F3"],
+    ["FI115", "Prashant Patil", "FI-1"],
+    ["FI217", "Ravi Kant", "FI-2"],
+    ["FI317", "Dhanashri Kaurase", "FI-3"],
+    ["FO119", "Kiran Desai", "FO-1"],
+    ["FO214", "Akshay Kulkarni", "FO-2"],
+    ["FO317", "Nitya Kadam", "FO-3"],
+    ["FO417", "Rakesh Sharma", "FO-4"],
+    ["S-118", "Shakeel Arab", "S-1"],
+    ["S-222", "Sanjay Bauchkar", "S-2"],
+    ["S-306", "Neena Naik", "S-3"],
+    ["S-414", "Sandeep Gurav", "S-4"],
+    ["ST122", "Kishor Mahapure", "ST-1"],
+    ["ST223", "Aktar Shaikh", "ST-2"],
+    ["ST323", "Sikander Shaikh", "ST-3"],
+    ["ST422", "Sajid Pathan", "ST-4"],
+    ["T-103", "Karan Gaikwad", "T-1"],
+    ["T-221", "Divya Datar", "T-2"],
+    ["T-323", "Anil Patekar", "T-3"],
+    ["T-412", "Naveen Patel", "T-4"]
+];
+
+
+    for(var i=0;i<22;i++){
+    if(OccupantId==ownerArray[i][0]){
+         Ownername=ownerArray[i][1];
+         FlatNo = ownerArray[i][2];
+    }
+    }
+    generatePDFReceipt(PaymentId, Ownername, FlatNo, PaymentAmount, PaymentAccountHead, PaymentDate, PaymentReceiptId, PaymentReceiptDate);
+}
+
+function generatePDFReceipt(PaymentId, Ownername, FlatNo, PaymentAmount, PaymentAccountHead, PaymentDate, PaymentReceiptId, PaymentReceiptDate) {
+    // Create a new jsPDF instance
+    var doc = new window.jspdf.jsPDF();
+
+    // Add content to the PDF
+    doc.setFillColor(0, 0, 255); // Blue fill color
+    doc.setDrawColor(0, 0, 255);
+
+    // Outer border
+    doc.rect(18, 20, 180, 200);
+
+    // Inner border with a space of 5 units
+    doc.rect(20, 22, 176, 196);
+
+    // Styling for the heading
+    doc.setTextColor(0, 0, 255);
+    doc.setFontSize(26);
+    doc.text('Vishwadev Apartment', 50, 40);
+
+    // Reset styling for other elements
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+   
+
+    doc.text(`Received with thanks from Shri/Smt  ${Ownername} with Payment ID: ${PaymentId}`, 30, 75);
+    doc.text(`FlatNo:${FlatNo}  for Account Head: ${PaymentAccountHead}`, 30, 85);
+    doc.text(`Payment Date: ${formatDate(PaymentDate)}`, 30, 95);
+    doc.text(`Receipt Date: ${formatDate(PaymentReceiptDate)}`, 30, 105);
+
+   doc.rect(23, 130, 170, 1);
+doc.text(`Amount Paid:`, 30, 140);
+
+// Draw a block for the payment amount
+doc.setDrawColor(0);  // Reset draw color
+doc.setFillColor(255);  // White fill color
+doc.rect(60, 137, 10, 8, 'F');  // Adjust the coordinates and size as needed
+ 
+    // Draw Rupee sign and PaymentAmount
+    
+    doc.text(`Rs. ${PaymentAmount}/-`, 60, 140);
+
+    // Reset font to default
+   
+doc.rect(23, 150, 170, 1);
+
+
+    const signatureImage = '/pearlsign.jpg';
+    doc.addImage(signatureImage, 'JPEG', 100, 160, 50, 20);
+
+    // Save the PDF with a unique name (you can customize the name)
+    var fileName = `Receipt_${PaymentId}.pdf`;
+    doc.save(fileName);
+}
+
+function formatDate(dateString) {
+    // Implement your logic to format the date as needed
+    // Example: assuming dateString is in a standard format like "2023-10-11T12:34:56"
+    const date = new Date(dateString);
+    return date.toLocaleDateString(); // Adjust this according to your formatting requirements
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // You can remove the initScript function, and directly place the code here
+});
+
+</script>
+
+}
+
+}

@@ -1,0 +1,83 @@
+@model string
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balance Result</title>
+    <style>
+        /* Add CSS styles for better formatting */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .heading {
+            font-weight: bold;
+        }
+
+        .payments, .expenses {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>@Html.Raw(Model.Split('\n')[0])</h2>
+        <div class="row">
+            <div class="column">
+                <div class="heading">Payments</div>
+                <div class="payments">
+                    @foreach (var paymentLine in Model.Split('\n').SkipWhile(line => !line.StartsWith("Payments")).Skip(1).TakeWhile(line => !line.StartsWith("Expenses")))
+                    {
+                        <div>@paymentLine</div>
+                    }
+                </div>
+            </div>
+            <div class="column">
+                <div class="heading">Expenses</div>
+                <div class="expenses">
+                    @foreach (var expenseLine in Model.Split('\n').SkipWhile(line => !line.StartsWith("Expenses")).Skip(1).TakeWhile(line => !line.StartsWith("Total Income")))
+                    {
+                        <div>@expenseLine</div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="heading">Total Income</div>
+                @Html.Raw(Model.Split('\n')[2]) <!-- Corrected index for Total Income -->
+            </div>
+            <div class="column">
+                <div class="heading">Total Expense</div>
+                @Html.Raw(Model.Split('\n')[6]) <!-- Corrected index for Total Expense -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="heading">Balance</div>
+                @Html.Raw(Model.Split('\n')[8]) <!-- Corrected index for Balance -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

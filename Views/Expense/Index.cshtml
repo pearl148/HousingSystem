@@ -1,0 +1,86 @@
+@model IEnumerable<Expense>
+@{
+    ViewData["Title"] = "Index";
+
+}
+<partial name="_Notification"></partial>
+<br><br>
+<div class="col-12 text-end">
+    <a asp-controller="Expense" asp-action="Create" class="btn btn-primary">
+        Register Expense
+    </a>
+    </div>
+    <br><br>
+   
+<table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+    <thead class="rounded-2">
+        <tr>
+            <th>
+                ExpenseId
+            </th>
+            <th>
+                Item
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Expense Month Year
+            </th>
+            <th>
+                Expense Amount
+            </th>
+            <th>
+                Expense Account Head
+            </th>
+            
+            <th>Remark
+            </th>
+             <th>Expense Proof
+            </th>
+            </tr>
+    </thead>
+    <tbody class="rounded-2">
+    @foreach(var obj in Model)
+    {
+        <tr >
+            <td width="30%">
+                @obj.ExpenseId
+            </td>
+             <td width="30%">
+                @obj.ExpenseItem
+            </td>
+            <td width="30%">
+                @obj.ExpenseDate
+            </td>
+            <td width="30%">
+                @obj.ExpenseMonthYear
+            </td>
+            <td width="30%">
+                @obj.ExpenseAmount
+            </td>
+            <td width="30%">
+                @obj.ExpenseAccountHead
+            </td>
+            <td width="30%">
+                @obj.ExpenseRemark
+            </td>
+            <td width="30%">
+                
+                <img src="data:image/png;base64,@Convert.ToBase64String(obj.ExpenseProofData)" alt="Expense Proof" height="50%" width="50%"/>
+
+            </td>
+            <td>
+                <div class="m-75 btn-group" role="group">
+                    <a asp-controller="Expense" asp-action="Edit" asp-route-ExpenseId ="@obj.ExpenseId" class="btn btn-primary">Edit</a>
+                </div>
+            </td>
+            <td>
+                <div class="m-75 btn-group" role="group">
+                    <a asp-controller="Expense" asp-action="Delete" asp-route-ExpenseId ="@obj.ExpenseId" class="btn btn-primary">Delete</a>
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,71 @@
+<!-- Your HTML document -->
+@model IEnumerable<Maintenance>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<partial name="_Notification"></partial>
+
+<br><br>
+
+<br><br>
+
+<table class="table table-border table-striped rounded-2" style="width:100%;text-align:center;background-color: rgba(100,100,100, 0.1) !important">
+    <thead class="rounded-2">
+        <tr>
+            <th>Flat No</th>
+            <th>OccupantId</th>
+            <th>MaintenanceId</th>
+            <th>MonthYear</th>
+            <th>Account Head</th>
+            <th>Amount</th>
+            <th>Remark</th>
+        </tr>
+    </thead>
+    <tbody class="rounded-2">
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="30%">@obj.FlatNo</td>
+                <td width="50%">@obj.OccupantId</td>
+                <td width="30%">@obj.MaintenanceId</td>
+                <td width="30%">@obj.MaintenanceMonthYear</td>
+                <td width="30%">@obj.MaintenanceAccountHead</td>
+                <td width="30%">@obj.MaintenanceAmount</td>
+                <td width="30%">@obj.MaintenanceRemark</td>
+                <td>
+                    @if (IsLatestMonth((obj.MaintenanceMonthYear.ToString("MM/yyyy"))))
+                    {
+                        <button class="btn btn-primary" onclick="Pay('@obj.MaintenanceId',@obj.MaintenanceAmount,'@obj.MaintenanceAccountHead')">PayAmount</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+function Pay(MaintenanceId, MaintenanceAmount, MaintenanceAccountHead) {
+    // Redirect to a new view with the maintenance amount
+    window.location.href = '/Maintenance/PaymentForm?MaintenanceId=' + MaintenanceId + '&MaintenanceAmount=' + MaintenanceAmount + '&MaintenanceAccountHead=' + MaintenanceAccountHead;
+}
+</script>
+
+
+
+
+@functions
+{
+    // Function to check if the given month and year is the latest
+    private bool IsLatestMonth(string monthYear)
+    {
+        // Implement your logic to compare with the current month and year
+        // For example, you can compare with the current date or store the latest month and year elsewhere
+        // Replace the logic below with your actual implementation
+
+        // Assuming monthYear is in the format "MM/YYYY"
+        var currentDate = DateTime.Now;
+        var latestMonthYear = currentDate.ToString("MM/yyyy");
+
+        return string.Equals(monthYear, latestMonthYear, StringComparison.OrdinalIgnoreCase);
+    }
+}

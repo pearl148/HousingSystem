@@ -1,0 +1,34 @@
+ @model Flat
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit flat</h2>
+            <hr/>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="FlatNo"></label>
+                <input asp-for="FlatNo" class="form-control" value="@Model.FlatNo"/>
+                <span asp-validation-for="FlatNo" class="text-danger"></span>
+                <label asp-for="SqFeetArea"></label>
+                <input asp-for="SqFeetArea" class="form-control"/>
+                <span asp-validation-for="SqFeetArea" class="text-danger"></span>
+            </div>
+    
+    <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+    <a asp-controller="Flat" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to list
+    </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+

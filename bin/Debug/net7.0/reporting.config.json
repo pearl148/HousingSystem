@@ -1,0 +1,10 @@
+{
+    "DataBindingMode": "Expressions",
+    "SqlConnectionStrings":{},
+    "JsonConnectionStrings":{},
+    "ReportsDirectory" : "PredefinedReports",
+    "ReportUrlsMap":{
+        "Report1": "Report1.repx",
+        "newReport": "newReport.repx"
+    }
+}

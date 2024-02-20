@@ -1,0 +1,45 @@
+@using System.Globalization
+@model IEnumerable<Payment>
+
+<div>
+    <form method="post" action="/Balance/GenerateBalance">
+        <label>Select Month and Year:</label>
+        <select name="selectedMonthYear">
+            @for (var year = DateTime.Now.Year; year >= 2023; year--)
+            {
+                for (var month = 12; month >= 1; month--)
+                {
+                    var dateValue = $"{month:D2}-{year}";
+                    var monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+                    <option value="@dateValue">@($"{monthName} {year}")</option>
+                }
+            }
+        </select>
+        <button type="submit">Generate Balance</button>
+        
+    </form>
+<form method="post" action="/Balance/GenerateSFBalance">
+        <label>Select Month and Year:</label>
+        <select name="selectedMonthYear">
+            @for (var year = DateTime.Now.Year; year >= 2023; year--)
+            {
+                for (var month = 12; month >= 1; month--)
+                {
+                    var dateValue = $"{month:D2}-{year}";
+                    var monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+                    <option value="@dateValue">@($"{monthName} {year}")</option>
+                }
+            }
+        </select>
+        <button type="submit">Generate Sinking Fund Balance</button>
+        
+    </form>
+    @if (ViewData["BalanceReport"] != null)
+    {
+        <div>
+            <h2>Balance Report</h2>
+            <!-- Display balance report here -->
+            @Html.Raw(ViewData["BalanceReport"])
+        </div>
+    }
+</div>

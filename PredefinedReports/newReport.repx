@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.2.4.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" PageWidth="850" PageHeight="1100" Version="23.2" Font="Arial, 9pt">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin1">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRLabel" Name="label1" Multiline="true" Text="Table by pearl" SizeF="100,23" LocationFloat="21.875,64.583" Padding="2,2,0,0,100" />
+      </Controls>
+    </Item1>
+    <Item2 Ref="3" ControlType="DetailBand" Name="Detail1" />
+    <Item3 Ref="4" ControlType="BottomMarginBand" Name="BottomMargin1" />
+  </Bands>
+</XtraReportsLayoutSerializer>

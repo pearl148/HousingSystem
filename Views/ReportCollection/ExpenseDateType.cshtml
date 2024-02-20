@@ -1,0 +1,10 @@
+@using (Html.BeginForm("GenerateReport", "ReportCollection", FormMethod.Post))
+{
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required>
+    <br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+    <br>
+    <input type="submit" value="Generate Report">
+}

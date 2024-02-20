@@ -1,0 +1,37 @@
+@model Complaint
+
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <p>
+                <strong>Notice ID:</strong> @Model.ComplaintId
+            </p>
+            
+            <p>
+                <strong>Complaint Registered Date:</strong> @Model.DateOfComplaint
+            </p>
+            
+            <p>
+                <strong>Complaint Registered By:</strong> @Model.ComplaintGiver
+            </p>
+            
+            <h1 style="text-align:center">
+                @Model.ComplaintTitle
+            </h1>
+            <div style="width:500px;height:500px;text-align:center;margin: 0 auto;">
+            <p style="text-align:justify;">
+                @Html.Raw(Model.ComplaintDetail.Replace("\r\n", "<br />"))
+            </p>
+            </div>
+        </div>
+    
+        <a asp-controller="Complaint" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to list
+        </a>
+    </div>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
